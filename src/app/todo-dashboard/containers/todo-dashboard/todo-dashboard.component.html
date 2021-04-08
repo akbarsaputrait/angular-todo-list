@@ -1,0 +1,5 @@
+<div class="py-4">
+  <app-add-todo (create)="handleAddToTask($event)"></app-add-todo>
+  <app-todo-count [todos]="todoList"></app-todo-count>
+  <app-todo-item *ngFor="let todo of todoList" [todo]="todo" (status)="handleStatusTask($event)" (onDelete)="handleDeleteTask($event)"></app-todo-item>
+</div>
